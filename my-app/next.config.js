@@ -3,6 +3,9 @@ const nextConfig = {
         experimental: {
           forceSwcTransforms: true,
         },
+        images:{
+          domains:['th.bing.com'],
+        }
       
 }
 
