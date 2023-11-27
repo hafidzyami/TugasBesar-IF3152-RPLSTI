@@ -418,7 +418,6 @@ const DashboardCustomer = () => {
             alt="logo"
             width={400}
             height={400}
-            style={{ width: "4vw", height: "4vw" }}
           />
           <div
             className="p-2"
