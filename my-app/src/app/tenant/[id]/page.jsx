@@ -55,8 +55,8 @@ const DashboardTenant = () => {
               <Image
                 src="/pesanan.png"
                 alt="pesanan"
-                width={200}
-                height={350}
+                width={300}
+                height={344}
               />
               <hr style={{ color: "#000" }} />
               <div style={{ color: "#000", marginBottom: "1vw " }}>
@@ -78,8 +78,8 @@ const DashboardTenant = () => {
               <Image
                 src="/menu.png"
                 alt="pesanan"
-                width={200}
-            height={350}
+                width={300}
+                height={344}
               />
               <hr style={{ color: "#000" }} />
               <div style={{ color: "#000", marginBottom: "1vw " }}>
@@ -101,8 +101,8 @@ const DashboardTenant = () => {
               <Image
                 src="/penjualan.png"
                 alt="penjualan"
-                width={200}
-                height={350}
+                width={300}
+                height={344}
               />
               <hr style={{ color: "#000" }} />
               <div style={{ color: "#000", marginBottom: "1vw " }}>
