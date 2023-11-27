@@ -51,7 +51,7 @@ function MengelolaMenu() {
     .subscribe();
 
   const fetchMenu = async () => {
-    const { data, error } = await supabase.from("Menu").select("*");
+    const { data, error } = await supabase.from("Menu").select("*").eq("idTenant", Params.id);
 
     if (error) {
       setFetchError("Cloud not fetch data");

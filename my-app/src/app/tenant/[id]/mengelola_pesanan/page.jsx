@@ -10,7 +10,7 @@ const MengelolaPesanan = () => {
   const [menus, setMenu] = useState([]);
   const Params = useParams();
 
-  const idtenant = 1;
+  const idtenant = Params.id;
 
   const handleToggleStatus = async (idPesanan) => {
     try {
@@ -49,7 +49,7 @@ const MengelolaPesanan = () => {
 
       const { data } = await supabase
         .from("Pesanan")
-        .select()
+        .select("*")
         .eq("idTenant", idtenant);
       setPesanan(data || []);
     } catch (error) {
