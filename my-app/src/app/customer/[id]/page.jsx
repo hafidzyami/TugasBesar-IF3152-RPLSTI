@@ -78,13 +78,7 @@ const DashboardCustomer = () => {
   return (
     <>
       {alert ? (
-        <Alert
-          variant={alertStatus}
-          onClose={() => setAlert(false)}
-          dismissible
-        >
-          <Alert.Heading className="text-center">{alertMessage}</Alert.Heading>
-        </Alert>
+        window.alert(alertMes<sage)
       ) : (
         <></>
       )}
