@@ -416,8 +416,8 @@ const DashboardCustomer = () => {
           <Image
             src="/logo-ybarokah.png"
             alt="logo"
-            width={400}
-            height={400}
+            width={50}
+            height={50}
           />
           <div
             className="p-2"
