@@ -5,6 +5,7 @@ import { useEffect } from "react";
 import { useRouter, useParams } from "next/navigation";
 import Cookies from "js-cookie";
 import Navbar from "../../../components/Navbar/Navbar";
+import Image from "next/image";
 
 const DashboardTenant = () => {
   const params = useParams();
@@ -51,13 +52,11 @@ const DashboardTenant = () => {
                 marginInlineEnd: "2rem",
               }}
             >
-              <img
+              <Image
                 src="/pesanan.png"
                 alt="pesanan"
-                style={{
-                  width: "20vw",
-                  height: "20vw",
-                }}
+                width={384}
+                height={384}
               />
               <hr style={{ color: "#000" }} />
               <div style={{ color: "#000", marginBottom: "1vw " }}>
@@ -76,13 +75,11 @@ const DashboardTenant = () => {
                 marginInlineEnd: "2rem",
               }}
             >
-              <img
+              <Image
                 src="/menu.png"
                 alt="pesanan"
-                style={{
-                  width: "20vw",
-                  height: "20vw",
-                }}
+                width={384}
+            height={384}
               />
               <hr style={{ color: "#000" }} />
               <div style={{ color: "#000", marginBottom: "1vw " }}>
@@ -101,13 +98,11 @@ const DashboardTenant = () => {
                 marginInlineEnd: "2rem",
               }}
             >
-              <img
+              <Image
                 src="/penjualan.png"
                 alt="penjualan"
-                style={{
-                  width: "20vw",
-                  height: "20vw",
-                }}
+                width={57}
+                height={57}
               />
               <hr style={{ color: "#000" }} />
               <div style={{ color: "#000", marginBottom: "1vw " }}>

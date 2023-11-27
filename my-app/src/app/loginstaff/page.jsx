@@ -7,6 +7,7 @@ import supabase from "@/config/supabaseClient";
 import Cookies from "js-cookie";
 import Navbar from "../../components/Navbar/Navbar";
 import "../../styles/global.css";
+import Image from "next/image";
 
 const LoginStaff = () => {
   const [username, setUsername] = useState();
@@ -109,21 +110,27 @@ const LoginStaff = () => {
         <div className={styles.rectangleParent}>
           <div className={styles.groupChild} />
           <b className={styles.welcomeToYbarokah}>Welcome to YBarokah!</b>
-          <img
+          <Image
             className={styles.logoYbarokah2RemovebgPreIcon}
             alt="Logo"
             src="/logo-ybarokah.png"
+            width={57}
+            height={57}
           />
           <div className={styles.field1}>
-            <img
+            <Image
               className={styles.field1Child}
               alt="rectangle"
               src="rectangle-2.svg"
+              width={57}
+            height={57}
             />
-            <img
+            <Image
               className={styles.field1Child2}
               alt="rectangle2"
               src="rectangle-2.svg"
+              width={57}
+            height={57}
             />
             <div>
               <form onSubmit={handleSubmit}>

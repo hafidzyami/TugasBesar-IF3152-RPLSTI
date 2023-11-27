@@ -8,6 +8,7 @@ import styles from "./page.module.css";
 import Cookies from "js-cookie";
 import "../../styles/global.css";
 import Navbar from "@/components/Navbar/Navbar";
+import Image from "next/image";
 
 const LoginCustomer = () => {
   const router = useRouter();
@@ -76,16 +77,20 @@ const LoginCustomer = () => {
         <div className={styles.rectangleParent}>
           <div className={styles.groupChild} />
           <b className={styles.welcomeToYbarokah}>Welcome to YBarokah!</b>
-          <img
+          <Image
             className={styles.logoYbarokah2RemovebgPreIcon}
             alt="Logo"
             src="/logo-ybarokah.png"
+            width={57}
+            height={57}
           />
           <div className={styles.field1}>
-            <img
+            <Image
               className={styles.field1Child}
               alt="rectangle"
               src="rectangle-2.svg"
+              width={57}
+              height={57}
             />
             <div>
               <form onSubmit={handleSubmit}>

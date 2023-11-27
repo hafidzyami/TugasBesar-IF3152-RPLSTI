@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const Cart = ({ cart }) => {
   let items = 0;
@@ -38,7 +39,8 @@ const Cart = ({ cart }) => {
         <div className="align-self-center">{items} Items</div>
         <div className="align-self-center">
           {formatCurrency(totalHarga)}
-          <img className="m-2" src="/cartShop.svg" alt="cart" />
+          <Image className="m-2" src="/cartShop.svg" alt="cart" width={57}
+            height={57}/>
         </div>
       </div>
     </div>

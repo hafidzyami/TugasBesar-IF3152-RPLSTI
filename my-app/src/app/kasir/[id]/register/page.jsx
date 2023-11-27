@@ -7,6 +7,7 @@ import Modal from "react-bootstrap/Modal";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
 import Form from "react-bootstrap/Form";
 import { Button } from "react-bootstrap";
+import Image from "next/image";
 
 const RegisterTenant = () => {
   const [username, setUsername] = useState();
@@ -115,21 +116,27 @@ const RegisterTenant = () => {
         <div className={styles.rectangleParent}>
           <div className={styles.groupChild} />
           <b className={styles.welcomeToYbarokah}>Register</b>
-          <img
+          <Image
             className={styles.logoYbarokah2RemovebgPreIcon}
             alt="Logo"
             src="/logo-ybarokah.png"
+            width={57}
+            height={57}
           />
           <div className={styles.field1}>
-            <img
+            <Image
               className={styles.field1Child}
               alt="rectangle"
               src="../../rectangle-2.svg"
+              width={57}
+              height={57}
             />
-            <img
+            <Image
               className={styles.field1Child2}
               alt="rectangle2"
               src="../../rectangle-2.svg"
+              width={57}
+              height={57}
             />
             <div>
               <form onSubmit={handleSubmit}>

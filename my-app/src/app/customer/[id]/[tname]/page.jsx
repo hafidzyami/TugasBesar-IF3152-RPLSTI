@@ -11,6 +11,7 @@ import { Modal, Alert } from "react-bootstrap";
 import Cart from "../../../../components/Cart";
 import Menu from "../../../../components/Menu";
 import { Card, Button } from "react-bootstrap";
+import Image from "next/image";
 
 const DashboardCustomer = () => {
   const router = useRouter();
@@ -124,7 +125,7 @@ const DashboardCustomer = () => {
       }
     };
     fetchMenu();
-  }, []);
+  }, [namaTenant]);
 
   const addToCart = async (menu) => {
     const existingItem = cart.find((item) => item.idMenu === menu.idMenu);
@@ -296,12 +297,11 @@ const DashboardCustomer = () => {
       >
         <div style={{ backgroundColor: "#333333", fontFamily: "Poppins" }}>
           <Modal.Header className="d-flex justify-content-between">
-            <img
+            <Image
               src="/logo-ybarokah.png"
               alt="logo"
-              style={{
-                width: "3vw",
-              }}
+              width={57}
+              height={57}
             />
             <Modal.Title className="text-light">Pesanan</Modal.Title>
             <div>
@@ -333,7 +333,7 @@ const DashboardCustomer = () => {
                           item.quantity === 0 ? (
                             <></>
                           ) : (
-                            <div className="d-flex justify-content-between">
+                            <div className="d-flex justify-content-between" key={item.idMenu}>
                               <div>
                                 <div>{item.nama}</div>
                                 <div>{formatCurrency(item.harga)}</div>
@@ -413,9 +413,11 @@ const DashboardCustomer = () => {
           className="d-flex justify-content-between"
           style={{ margin: "1rem", fontFamily: "Poppins" }}
         >
-          <img
+          <Image
             src="/logo-ybarokah.png"
             alt="logo"
+            width={400}
+            height={400}
             style={{ width: "4vw", height: "4vw" }}
           />
           <div
@@ -449,15 +451,18 @@ const DashboardCustomer = () => {
             ) : (
               <div>
                 {gambarTenant.map((item, index) => (
-                  <img
+                  <div key={item.idTenant}>
+                  <Image
                     src={item.gambar}
                     alt="gambarTenant"
+                    width={153}
+                    height={153}
                     style={{
-                      width: "8vw",
-                      height: "8vw",
+        
                       borderRadius: "2vw",
                     }}
                   />
+                  </div>
                 ))}
               </div>
             )}
@@ -483,14 +488,15 @@ const DashboardCustomer = () => {
             ) : (
               <div className="row row-cols-2 row-cols-md-4 g-4">
                 {menu.map((item, index) => (
-                  <div className="col">
+                  <div className="col" key={item.idMenu}>
                     <div key={item.idTenant}>
                       <div className="card" style={{ borderRadius: "1vw" }}>
-                        <img
+                        <Image
                           src={item.gambar}
                           className="card-img-top"
                           alt={`Image ${index}`}
                           height={240}
+                          width={240}
                           style={{
                             padding: "5px",
                             borderRadius: "1rem",

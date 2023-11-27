@@ -6,6 +6,7 @@ import supabase from "@/config/supabaseClient";
 import Link from "next/link";
 import Cookies from "js-cookie";
 import { useParams, useRouter } from "next/navigation";
+import Image from "next/image";
 
 const CustomNavbar = () => {
   const params = useParams();
@@ -85,11 +86,11 @@ const CustomNavbar = () => {
             }}
           >
             <Navbar.Brand>
-          <img
+          <Image
             src="/logo-yb-hitam.png"
             alt="Logo"
-            width="80%"
-            height="30"
+            width={57}
+            height={57}
             class="d-inline-block align-text-top"
           />
         </Navbar.Brand>

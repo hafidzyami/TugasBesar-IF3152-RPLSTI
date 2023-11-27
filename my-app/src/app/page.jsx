@@ -5,6 +5,7 @@ import styles from "./page.module.css";
 import "../styles/global.css";
 import Link from "next/link";
 import Navbar from "@/components/Navbar/Navbar";
+import Image from "next/image";
 
 const LandingPage = () => {
   return (
@@ -14,10 +15,12 @@ const LandingPage = () => {
         <div className={styles.rectangleParent}>
           <div className={styles.groupChild} />
           <b className={styles.welcomeToYbarokah}>Welcome to YBarokah!</b>
-          <img
+          <Image
             className={styles.logoYbarokah2RemovebgPreIcon}
             alt="Logo"
             src="/logo-ybarokah.png"
+            width={200}
+            height={200}
           />
           <Link href="/loginstaff">
             <button className={styles.groupItem} type="button">
